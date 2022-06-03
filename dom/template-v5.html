@@ -2,7 +2,7 @@
 
 <div id="app">
     <!-- Conteúdo -->
-    <p>{{ titulo }}</p>
+    <p v-once>{{ titulo }}</p>
     <p>{{ saudacao() }}</p>
     <!-- Propriedade -->
     <a v-bind:href="link">Google</a>
@@ -17,7 +17,7 @@
         },
         methods: {
             saudacao: function() {
-                console.log(this)
+                this.titulo = 'Bom dia!!!'
                 return this.titulo
             }
         }
