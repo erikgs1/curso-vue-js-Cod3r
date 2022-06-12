@@ -9,7 +9,8 @@
     <!-- 2) Escute o evento "keydown" e armazene o valor na propriedade
         data (dica: event.target.value) -->
     <div>
-        <input type="text">
+        <!-- Feito com auxilio do vídeo de correção  -->
+        <input type="text" v-on:keydown="valor = $event.target.value">
         <p>{{ valor }}</p>
     </div>
     
